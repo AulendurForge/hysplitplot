@@ -1,0 +1,30 @@
+[project]
+name = "hysplitplot"
+version = "0.15.0"
+description = "HYSPLIT Graphics"
+readme = "README.md"
+requires-python = "==3.9.*"
+authors = [
+    {name = "Sonny Zinn", email = "sonny.zinn@noaa.gov"},
+]
+dependencies = [
+    "hysplitdata==0.3.*",
+    "geopandas==0.14.4",
+    "cartopy>=0.23.0",
+    "numpy>=2.0.2",
+    "pytz==2025.2",
+    "timezonefinder==6.5.9",
+    "contextily==1.6.2",
+    "mercantile==1.2.1",
+]
+
+[project.optional-dependencies]
+dev = ["pytest==8.3.5"]
+
+[tool.setuptools.packages.find]
+where = ["."]
+include = ["hysplitplot", "hysplitplot.*"]
+
+[build-system]
+requires = ["setuptools>=61", "wheel"]
+build-backend = "setuptools.build_meta"
